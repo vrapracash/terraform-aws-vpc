@@ -61,3 +61,28 @@ variable "db_subnet_group_tags" {
 variable "nat_gatewat_tags" {
     default = {}
 }
+
+variable "public_route_table_tags" {
+    default = {}
+}
+
+variable "private_route_table_tags" {
+    default = {}
+}
+
+variable "database_route_table_tags" {
+    default = {}
+}
+
+variable "is_peering_required" {
+    type = bool
+    default = false
+}
+
+variable "vpc_peering_tags" {
+    default = {}
+}
+
+variable "vpc_id_default" {
+    default = "vpc-083fbf1b32163b429"
+}
