@@ -70,10 +70,12 @@ resource "aws_subnet" "database" {
     )
 }
 
-resource "aws_db_subnet_group" "main" {
-  name = local.resource_name  
+# DB Subnet group for RDS
+resource "aws_db_subnet_group" "default" {
+  name       = local.resource_name
   subnet_ids = aws_subnet.database[*].id
-  tags = merge (
+
+  tags = merge(
     var.common_tags,
     var.db_subnet_group_tags,
     {
