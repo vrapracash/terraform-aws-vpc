@@ -93,5 +93,5 @@ variable "vpc_peering_tags" {
 }
 
 variable "vpc_id_default" {
-    default = "vpc-056b02efc74a78842"
+    default = "vpc-09f7217bd06bc3c42"
 }
